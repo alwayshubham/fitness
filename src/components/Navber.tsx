@@ -3,8 +3,7 @@
 import { SignInButton, SignUpButton, UserButton, useUser } from "@clerk/nextjs";
 import { DumbbellIcon, HomeIcon, UserIcon, ZapIcon } from "lucide-react";
 import Link from "next/link";
-import { Button } from "../ui/button";
-
+import { Button } from "./ui/button";
 
 const Navbar = () => {
   const { isSignedIn } = useUser();
@@ -18,7 +17,7 @@ const Navbar = () => {
             <ZapIcon className="w-4 h-4 text-primary" />
           </div>
           <span className="text-xl font-bold font-mono">
-            Fit<span className="text-primary">ness</span>.ai
+            code<span className="text-primary">flex</span>.ai
           </span>
         </Link>
 
@@ -35,7 +34,7 @@ const Navbar = () => {
               </Link>
 
               <Link
-                href="/generate-program"
+                href="/genrate-program"
                 className="flex items-center gap-1.5 text-sm hover:text-primary transition-colors"
               >
                 <DumbbellIcon size={16} />
@@ -54,7 +53,7 @@ const Navbar = () => {
                 variant="outline"
                 className="ml-2 border-primary/50 text-primary hover:text-white hover:bg-primary/10"
               >
-                <Link href="/generate-program">Get Started</Link>
+                <Link href="/genrate-program">Get Started</Link>
               </Button>
               <UserButton />
             </>
